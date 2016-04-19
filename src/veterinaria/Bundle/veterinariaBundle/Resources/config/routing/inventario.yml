@@ -1,0 +1,30 @@
+inventario:
+    path:     /
+    defaults: { _controller: "veterinariaBundle:inventario:index" }
+
+inventario_show:
+    path:     /{id}/show
+    defaults: { _controller: "veterinariaBundle:inventario:show" }
+
+inventario_new:
+    path:     /new
+    defaults: { _controller: "veterinariaBundle:inventario:new" }
+
+inventario_create:
+    path:     /create
+    defaults: { _controller: "veterinariaBundle:inventario:create" }
+    methods:  POST
+
+inventario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "veterinariaBundle:inventario:edit" }
+
+inventario_update:
+    path:     /{id}/update
+    defaults: { _controller: "veterinariaBundle:inventario:update" }
+    methods:  [POST, PUT]
+
+inventario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "veterinariaBundle:inventario:delete" }
+    methods:  [POST, DELETE]

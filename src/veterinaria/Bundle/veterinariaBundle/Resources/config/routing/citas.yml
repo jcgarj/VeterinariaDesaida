@@ -1,0 +1,30 @@
+citas:
+    path:     /
+    defaults: { _controller: "veterinariaBundle:citas:index" }
+
+citas_show:
+    path:     /{id}/show
+    defaults: { _controller: "veterinariaBundle:citas:show" }
+
+citas_new:
+    path:     /new
+    defaults: { _controller: "veterinariaBundle:citas:new" }
+
+citas_create:
+    path:     /create
+    defaults: { _controller: "veterinariaBundle:citas:create" }
+    methods:  POST
+
+citas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "veterinariaBundle:citas:edit" }
+
+citas_update:
+    path:     /{id}/update
+    defaults: { _controller: "veterinariaBundle:citas:update" }
+    methods:  [POST, PUT]
+
+citas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "veterinariaBundle:citas:delete" }
+    methods:  [POST, DELETE]

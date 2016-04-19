@@ -1,0 +1,30 @@
+ventas:
+    path:     /
+    defaults: { _controller: "veterinariaBundle:ventas:index" }
+
+ventas_show:
+    path:     /{id}/show
+    defaults: { _controller: "veterinariaBundle:ventas:show" }
+
+ventas_new:
+    path:     /new
+    defaults: { _controller: "veterinariaBundle:ventas:new" }
+
+ventas_create:
+    path:     /create
+    defaults: { _controller: "veterinariaBundle:ventas:create" }
+    methods:  POST
+
+ventas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "veterinariaBundle:ventas:edit" }
+
+ventas_update:
+    path:     /{id}/update
+    defaults: { _controller: "veterinariaBundle:ventas:update" }
+    methods:  [POST, PUT]
+
+ventas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "veterinariaBundle:ventas:delete" }
+    methods:  [POST, DELETE]

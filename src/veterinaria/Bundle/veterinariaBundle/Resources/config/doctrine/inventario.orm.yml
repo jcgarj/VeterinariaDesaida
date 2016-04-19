@@ -1,0 +1,20 @@
+veterinaria\Bundle\veterinariaBundle\Entity\inventario:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        cantidadExist:
+            type: integer
+    oneToMany:
+        medicamentos:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\medicamentos
+            mappedBy: inventario
+        productos:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\productos
+            mappedBy: inventario
+    lifecycleCallbacks: {  }

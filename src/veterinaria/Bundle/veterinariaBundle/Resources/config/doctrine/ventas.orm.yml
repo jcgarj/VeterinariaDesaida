@@ -1,0 +1,47 @@
+veterinaria\Bundle\veterinariaBundle\Entity\ventas:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fechaSalida:
+            type: date
+        cantidad:
+            type: integer
+        total:
+            type: integer
+    oneToMany:
+        medicamentos:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\medicamentos
+            mappedBy: ventas
+        productos:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\productos
+            mappedBy: ventas
+    manyToOne:
+        cliente:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\cliente
+            joinTable:
+                name: cliente_id
+                joinColumns:
+                    ventas_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    cliente_id:
+                        referencedColumnName: id
+            mappedBy: ventas
+        mvz:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\mvz
+            joinTable:
+                name: mvz_id
+                joinColumns:
+                    ventas_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    mvz_id:
+                        referencedColumnName: id
+            mappedBy: ventas
+    lifecycleCallbacks: {  }

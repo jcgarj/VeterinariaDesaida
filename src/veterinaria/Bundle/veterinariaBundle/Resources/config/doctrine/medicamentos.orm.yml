@@ -1,0 +1,57 @@
+veterinaria\Bundle\veterinariaBundle\Entity\medicamentos:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombreMed:
+            type: string
+            length: '30'
+        fechaCad:
+            type: date
+        tipoMed:
+            type: string
+            length: '30'
+        costo:
+            type: integer
+        precio:
+            type: integer
+    manyToOne:
+        proveedores:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\proveedores
+            joinTable:
+                name: proveedores_id
+                joinColumns:
+                    medicamentos_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    proveedores_id:
+                        referencedColumnName: id
+            mappedBy: medicamentos
+        inventario:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\inventario
+            joinTable:
+                name: inventario_id
+                joinColumns:
+                    medicamentos_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    inventario_id:
+                        referencedColumnName: id
+            mappedBy: medicamentos
+        ventas:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\ventas
+            joinTable:
+                name: ventas_id
+                joinColumns:
+                    ventas_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    medicamentos_id:
+                        referencedColumnName: id
+            mappedBy: medicamentos
+    lifecycleCallbacks: {  }

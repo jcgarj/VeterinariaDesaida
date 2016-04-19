@@ -1,0 +1,30 @@
+mascota:
+    path:     /
+    defaults: { _controller: "veterinariaBundle:mascota:index" }
+
+mascota_show:
+    path:     /{id}/show
+    defaults: { _controller: "veterinariaBundle:mascota:show" }
+
+mascota_new:
+    path:     /new
+    defaults: { _controller: "veterinariaBundle:mascota:new" }
+
+mascota_create:
+    path:     /create
+    defaults: { _controller: "veterinariaBundle:mascota:create" }
+    methods:  POST
+
+mascota_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "veterinariaBundle:mascota:edit" }
+
+mascota_update:
+    path:     /{id}/update
+    defaults: { _controller: "veterinariaBundle:mascota:update" }
+    methods:  [POST, PUT]
+
+mascota_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "veterinariaBundle:mascota:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,4 @@
+veterinaria:
+    resource: "@veterinariaBundle/Resources/config/routing.yml"
+    prefix:   /
+

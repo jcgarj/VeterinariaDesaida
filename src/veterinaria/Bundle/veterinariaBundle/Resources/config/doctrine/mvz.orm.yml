@@ -1,0 +1,49 @@
+veterinaria\Bundle\veterinariaBundle\Entity\mvz:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombreMvz:
+            type: string
+            length: '30'
+        appatMvz:
+            type: string
+            length: '30'
+        apmatMvz:
+            type: string
+            length: '30'
+        calle:
+            type: string
+            length: '30'
+        noExt:
+            type: integer
+        noInt:
+            type: integer
+        colonia:
+            type: string
+            length: '30'
+        delegacion:
+            type: string
+            length: '30'
+        telefono:
+            type: string
+            length: '15'
+        correo:
+            type: string
+            length: '40' 
+    oneToMany:
+        mascota:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\mascota
+            mappedBy: mvz
+        citas:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\citas
+            mappedBy: mvz
+        ventas:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\ventas
+            mappedBy: mvz
+    lifecycleCallbacks: {  }

@@ -1,0 +1,56 @@
+veterinaria\Bundle\veterinariaBundle\Entity\citas:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fecha:
+            type: date
+        motivo:
+            type: string
+            length: '100'
+        costo:
+            type: integer
+        observaciones:
+            type: string
+            length: '255'
+    manyToOne:
+        cliente:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\cliente
+            joinTable:
+                name: cliente_id
+                joinColumns:
+                    citas_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    cliente_id:
+                        referencedColumnName: id
+            mappedBy: citas
+        mascota:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\mascota
+            joinTable:
+                name: mascota_id
+                joinColumns:
+                    citas_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    mascota_id:
+                        referencedColumnName: id
+            mappedBy: citas
+        mvz:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\mvz
+            joinTable:
+                name: mvz_id
+                joinColumns:
+                    citas_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    mvz_id:
+                        referencedColumnName: id
+            mappedBy: citas
+
+    lifecycleCallbacks: {  }

@@ -1,0 +1,49 @@
+veterinaria\Bundle\veterinariaBundle\Entity\cliente:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombreCL:
+            type: string
+            length: '30'
+        appatCL:
+            type: string
+            length: '30'
+        apmatCL:
+            type: string
+            length: '30'
+        calle:
+            type: string
+            length: '30'
+        noExt:
+            type: integer
+        noInt:
+            type: integer
+        colonia:
+            type: string
+            length: '30'
+        delegacion:
+            type: string
+            length: '30'
+        telefono:
+            type: string
+            length: '15'
+        correo:
+            type: string
+            length: '40'
+    oneToMany:
+        mascota:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\mascota
+            mappedBy: cliente
+        citas:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\citas
+            mappedBy: cliente
+        ventas:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\ventas
+            mappedBy: ventas
+    lifecycleCallbacks: {  }

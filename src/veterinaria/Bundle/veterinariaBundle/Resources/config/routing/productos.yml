@@ -1,0 +1,30 @@
+productos:
+    path:     /
+    defaults: { _controller: "veterinariaBundle:productos:index" }
+
+productos_show:
+    path:     /{id}/show
+    defaults: { _controller: "veterinariaBundle:productos:show" }
+
+productos_new:
+    path:     /new
+    defaults: { _controller: "veterinariaBundle:productos:new" }
+
+productos_create:
+    path:     /create
+    defaults: { _controller: "veterinariaBundle:productos:create" }
+    methods:  POST
+
+productos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "veterinariaBundle:productos:edit" }
+
+productos_update:
+    path:     /{id}/update
+    defaults: { _controller: "veterinariaBundle:productos:update" }
+    methods:  [POST, PUT]
+
+productos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "veterinariaBundle:productos:delete" }
+    methods:  [POST, DELETE]

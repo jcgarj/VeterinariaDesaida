@@ -1,0 +1,30 @@
+observaciones:
+    path:     /
+    defaults: { _controller: "veterinariaBundle:observaciones:index" }
+
+observaciones_show:
+    path:     /{id}/show
+    defaults: { _controller: "veterinariaBundle:observaciones:show" }
+
+observaciones_new:
+    path:     /new
+    defaults: { _controller: "veterinariaBundle:observaciones:new" }
+
+observaciones_create:
+    path:     /create
+    defaults: { _controller: "veterinariaBundle:observaciones:create" }
+    methods:  POST
+
+observaciones_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "veterinariaBundle:observaciones:edit" }
+
+observaciones_update:
+    path:     /{id}/update
+    defaults: { _controller: "veterinariaBundle:observaciones:update" }
+    methods:  [POST, PUT]
+
+observaciones_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "veterinariaBundle:observaciones:delete" }
+    methods:  [POST, DELETE]

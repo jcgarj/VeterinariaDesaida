@@ -1,0 +1,30 @@
+mvz:
+    path:     /
+    defaults: { _controller: "veterinariaBundle:mvz:index" }
+
+mvz_show:
+    path:     /{id}/show
+    defaults: { _controller: "veterinariaBundle:mvz:show" }
+
+mvz_new:
+    path:     /new
+    defaults: { _controller: "veterinariaBundle:mvz:new" }
+
+mvz_create:
+    path:     /create
+    defaults: { _controller: "veterinariaBundle:mvz:create" }
+    methods:  POST
+
+mvz_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "veterinariaBundle:mvz:edit" }
+
+mvz_update:
+    path:     /{id}/update
+    defaults: { _controller: "veterinariaBundle:mvz:update" }
+    methods:  [POST, PUT]
+
+mvz_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "veterinariaBundle:mvz:delete" }
+    methods:  [POST, DELETE]

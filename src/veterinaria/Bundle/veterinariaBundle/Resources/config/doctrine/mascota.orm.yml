@@ -1,0 +1,54 @@
+veterinaria\Bundle\veterinariaBundle\Entity\mascota:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombreM:
+            type: string
+            length: '30'
+        peso:
+            type: integer
+        edad:
+            type: integer
+        color:
+            type: string
+            length: '20'
+        especie:
+            type: string
+            length: '30'
+        raza:
+            type: string
+            length: '30'
+    oneToMany:
+        citas:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\citas
+            mappedBy: mascota
+    manyToOne:
+        cliente:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\cliente
+            joinTable:
+                name: cliente_id
+                joinColumns:
+                    mascota_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    cliente_id:
+                        referencedColumnName: id
+            mappedBy: mascota
+        mvz:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\mvz
+            joinTable:
+                name: mvz_id
+                joinColumns:
+                    mascota_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    mvz_id:
+                        referencedColumnName: id
+            mappedBy: mascota
+    lifecycleCallbacks: {  }

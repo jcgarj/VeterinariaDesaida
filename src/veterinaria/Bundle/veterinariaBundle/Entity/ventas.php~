@@ -1,0 +1,112 @@
+<?php
+
+namespace veterinaria\Bundle\veterinariaBundle\Entity;
+
+/**
+ * ventas
+ */
+class ventas
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     */
+    private $fechaSalida;
+
+    /**
+     * @var integer
+     */
+    private $cantidad;
+
+    /**
+     * @var integer
+     */
+    private $total;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set fechaSalida
+     *
+     * @param \DateTime $fechaSalida
+     *
+     * @return ventas
+     */
+    public function setFechaSalida($fechaSalida)
+    {
+        $this->fechaSalida = $fechaSalida;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaSalida
+     *
+     * @return \DateTime
+     */
+    public function getFechaSalida()
+    {
+        return $this->fechaSalida;
+    }
+
+    /**
+     * Set cantidad
+     *
+     * @param integer $cantidad
+     *
+     * @return ventas
+     */
+    public function setCantidad($cantidad)
+    {
+        $this->cantidad = $cantidad;
+
+        return $this;
+    }
+
+    /**
+     * Get cantidad
+     *
+     * @return integer
+     */
+    public function getCantidad()
+    {
+        return $this->cantidad;
+    }
+
+    /**
+     * Set total
+     *
+     * @param integer $total
+     *
+     * @return ventas
+     */
+    public function setTotal($total)
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
+    /**
+     * Get total
+     *
+     * @return integer
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+}

@@ -1,0 +1,43 @@
+veterinaria_ventas:
+    resource: "@veterinariaBundle/Resources/config/routing/ventas.yml"
+    prefix:   /ventas
+
+veterinaria_inventario:
+    resource: "@veterinariaBundle/Resources/config/routing/inventario.yml"
+    prefix:   /inventario
+
+veterinaria_productos:
+    resource: "@veterinariaBundle/Resources/config/routing/productos.yml"
+    prefix:   /productos
+
+veterinaria_proveedores:
+    resource: "@veterinariaBundle/Resources/config/routing/proveedores.yml"
+    prefix:   /proveedores
+
+veterinaria_medicamentos:
+    resource: "@veterinariaBundle/Resources/config/routing/medicamentos.yml"
+    prefix:   /medicamentos
+
+veterinaria_citas:
+    resource: "@veterinariaBundle/Resources/config/routing/citas.yml"
+    prefix:   /citas
+
+veterinaria_observaciones:
+    resource: "@veterinariaBundle/Resources/config/routing/observaciones.yml"
+    prefix:   /observaciones
+
+veterinaria_mvz:
+    resource: "@veterinariaBundle/Resources/config/routing/mvz.yml"
+    prefix:   /mvz
+
+veterinaria_mascota:
+    resource: "@veterinariaBundle/Resources/config/routing/mascota.yml"
+    prefix:   /mascota
+
+veterinaria_cliente:
+    resource: "@veterinariaBundle/Resources/config/routing/cliente.yml"
+    prefix:   /cliente
+
+veterinaria_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: veterinariaBundle:Default:index }

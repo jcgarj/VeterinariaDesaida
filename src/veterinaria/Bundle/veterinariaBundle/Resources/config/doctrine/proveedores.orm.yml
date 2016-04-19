@@ -1,0 +1,27 @@
+veterinaria\Bundle\veterinariaBundle\Entity\proveedores:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        regimenT:
+            type: string
+            length: '30'
+        rfc:
+            type: string
+            length: '15'
+        telefono:
+            type: string
+            length: '15'
+    oneToMany:
+        medicamentos:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\medicamentos
+            mappedBy: proveedores
+        productos:
+            targetEntity: veterinaria\Bundle\veterinariaBundle\Entity\productos
+            mappedBy: proveedores
+    lifecycleCallbacks: {  }
