@@ -1,7 +1,8 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>medicamentos</h1>
+    <section class="posts col-md-9">
+        <h1>medicamentos</h1>
 
     <table class="record_properties">
         <tbody>
@@ -45,4 +46,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+    </section>
 {% endblock %}

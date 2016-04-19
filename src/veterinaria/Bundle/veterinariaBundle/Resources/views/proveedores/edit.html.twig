@@ -1,9 +1,21 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>proveedores edit</h1>
+    <section class="posts col-md-9">
+        <h1>proveedores edit</h1>
 
-    {{ form(edit_form) }}
+    {{ form_start(edit_form) }}
+
+    {{ form_widget(edit_form.regimenT, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.regimenT) }}
+
+    {{ form_widget(edit_form.rfc, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.rfc) }}
+
+    {{ form_widget(edit_form.telefono, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.telefono) }}
+
+    {{ form_widget(edit_form._token) }}
 
         <ul class="record_actions">
     <li>
@@ -13,4 +25,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+    </section>
 {% endblock %}

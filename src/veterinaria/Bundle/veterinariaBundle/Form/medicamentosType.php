@@ -16,7 +16,7 @@ class medicamentosType extends AbstractType
     {
         $builder
             ->add('nombreMed')
-            ->add('fechaCad')
+            ->add('fechaCad', 'date')
             ->add('tipoMed')
             ->add('costo')
             ->add('precio')

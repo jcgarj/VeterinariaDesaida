@@ -1,9 +1,36 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>mascota creation</h1>
+    <section class="posts col-md-9">
+        <h1>mascota creation</h1>
 
-    {{ form(form) }}
+    {{ form_start(form) }}
+
+    {{ form_widget(form.nombreM, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.nombreM) }}
+
+    {{ form_widget(form.peso, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.peso) }}
+
+    {{ form_widget(form.edad, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.edad) }}
+
+    {{ form_widget(form.color, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.color) }}
+
+    {{ form_widget(form.especie, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.especie) }}
+
+    {{ form_widget(form.raza, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.raza) }}
+
+    {{ form_widget(form.cliente, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.cliente) }}
+
+    {{ form_widget(form.mvz, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.mvz) }}
+
+    {{ form_widget(form._token) }}
 
         <ul class="record_actions">
     <li>
@@ -12,4 +39,5 @@
         </a>
     </li>
 </ul>
+    </section>
 {% endblock %}

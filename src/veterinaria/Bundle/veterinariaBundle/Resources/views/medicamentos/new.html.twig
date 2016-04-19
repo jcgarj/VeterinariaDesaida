@@ -1,9 +1,30 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>medicamentos creation</h1>
+    <section class="posts col-md-9">
+        <h1>medicamentos creation</h1>
 
-    {{ form(form) }}
+    {{ form_start(form) }}
+
+    {{ form_widget(form.nombreMed, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.nombreMed) }}
+
+    {{ form_widget(form.fechaCad, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.fechaCad) }}
+
+    {{ form_widget(form.tipoMed, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.tipoMed) }}
+
+    {{ form_widget(form.costo, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.costo) }}
+
+    {{ form_widget(form.precio, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.precio) }}
+
+    {{ form_widget(form.proveedores, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.proveedores) }}
+
+    {{ form_widget(form._token) }}
 
         <ul class="record_actions">
     <li>
@@ -12,4 +33,5 @@
         </a>
     </li>
 </ul>
+    </section>
 {% endblock %}

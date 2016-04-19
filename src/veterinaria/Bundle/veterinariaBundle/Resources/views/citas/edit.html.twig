@@ -1,9 +1,30 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>citas edit</h1>
+    <section class="posts col-md-9">
+        <h1>citas edit</h1>
 
-    {{ form(edit_form) }}
+    {{ form_start(edit_form) }}
+
+    {{ form_widget(edit_form.date, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.date) }}
+
+    {{ form_widget(edit_form.motivo, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.motivo) }}
+
+    {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.costo) }}
+
+    {{ form_widget(edit_form.cliente, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.cliente) }}
+
+    {{ form_widget(edit_form.mascota, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.mascota) }}
+
+    {{ form_widget(edit_form.mvz, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.mvz) }}
+
+    {{ form_widget(edit_form._token) }}
 
         <ul class="record_actions">
     <li>
@@ -13,4 +34,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+    </section>
 {% endblock %}

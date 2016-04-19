@@ -1,9 +1,42 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>mvz creation</h1>
+    <section class="posts col-md-9">
+        <h1>mvz creation</h1>
 
-    {{ form(form) }}
+    {{ form_start(form) }}
+
+    {{ form_widget(form.nombreMvz, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.nombreMvz) }}
+
+    {{ form_widget(form.appatMvz, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.appatMvz) }}
+
+    {{ form_widget(form.apmatMvz, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.apmatMvz) }}
+
+    {{ form_widget(form.calle, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.calle) }}
+
+    {{ form_widget(form.noExt, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.noExt) }}
+
+    {{ form_widget(form.noInt, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.noInt) }}
+
+    {{ form_widget(form.colonia, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.colonia) }}
+
+    {{ form_widget(form.delegacion, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.delegacion) }}
+
+    {{ form_widget(form.telefono, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.telefono) }}
+
+    {{ form_widget(form.correo, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.correo) }}
+
+    {{ form_widget(form._token) }}
 
         <ul class="record_actions">
     <li>
@@ -12,4 +45,5 @@
         </a>
     </li>
 </ul>
+    </section>
 {% endblock %}

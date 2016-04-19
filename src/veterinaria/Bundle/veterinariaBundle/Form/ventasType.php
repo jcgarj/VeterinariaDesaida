@@ -15,7 +15,7 @@ class ventasType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('fechaSalida')
+            ->add('fechaSalida', 'date')
             ->add('cantidad')
             ->add('total')
             ->add('cliente')

@@ -1,9 +1,27 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>productos edit</h1>
+    <section class="posts col-md-9">
+        <h1>productos edit</h1>
 
-    {{ form(edit_form) }}
+    {{ form_start(edit_form) }}
+
+    {{ form_widget(edit_form.nombreProd, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.nombreProd) }}
+
+    {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.costo) }}
+
+    {{ form_widget(edit_form.precio, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.precio) }}
+
+    {{ form_widget(edit_form.fechaEntrega, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.fechaEntrega) }}
+
+    {{ form_widget(edit_form.proveedores, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(edit_form.proveedores) }}
+
+    {{ form_widget(edit_form._token) }}
 
         <ul class="record_actions">
     <li>
@@ -13,4 +31,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+    </section>
 {% endblock %}

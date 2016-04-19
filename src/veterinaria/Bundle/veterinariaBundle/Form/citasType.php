@@ -15,7 +15,7 @@ class citasType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('fecha')
+            ->add('fecha', 'date')
             ->add('motivo')
             ->add('costo')
             ->add('cliente')

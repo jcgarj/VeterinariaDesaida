@@ -18,7 +18,7 @@ class productosType extends AbstractType
             ->add('nombreProd')
             ->add('costo')
             ->add('precio')
-            ->add('fechaEntrega')
+            ->add('fechaEntrega', 'date')
             ->add('proveedores')
         ;
     }

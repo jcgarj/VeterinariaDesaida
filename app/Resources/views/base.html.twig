@@ -1,13 +1,122 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}La Rata Muerta{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!--para hacer ajustable el sitio a diferentes dispositivos-->
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/veterinaria/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/veterinaria/css/estilos.css')}}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-it">
+                        <span class="sr-only">Desplegar / Ocultar Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">La Rata Muerta</a>
+                </div>
+                <!--Inicia Menu-->
+
+                <div class="collapse navbar-collapse" id="navegacion-it">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                Registro <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ path('cliente')}}">Clientes</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('mascota')}}">Mascota</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('mvz')}}">MVZ</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('proveedores')}}">Proveedor</a></li>           
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                Productos <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ path('productos')}}">Productos</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('medicamentos')}}">Medicamento</a></li>         
+                            </ul>
+                        </li>
+                        <li><a href="{{ path('inventario')}}">Inventario</a></li>
+                        <li><a href="{{ path('ventas')}}">Ventas</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    
+    <section class="jumbotron">
+        <div class="container">
+            <h1>La Rata Muerta</h1>
+            <p>Hasta que hayas amado a un animal, una parte de tu alma estará dormida.</p>
+        </div>
+    </section>
+
+    <section class="main container">
+        <div class="row">
+            
+            <!--aqui va el section-->
+            {% block body %}
+            {% endblock %}
+
+            <aside class="col-md-3 hidden-xs hidden-sm">
+                <h4>Categorias</h4>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Registro</a>
+                    <a href="#" class="list-group-item">Productos</a>
+                    <a href="#" class="list-group-item">Inventario</a>
+                    <a href="#" class="list-group-item">Ventas</a>
+                </div>
+
+                <h4>Articulos recientes</h4>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Operan a perro policía, oficiales tuvieron que pagarlo</h4>
+                    <p class="list-group-item-text">¡¡Qué bien por los oficiales!! Pero qué mal por la Secretaría de Seguridad Pública Municipal que no los quiso apoyar. Un perro policía perteneciente al grupo k-9 fue operado por una enfermedad que... </p>
+                </a>
+
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Conoce a Cooper, el perro Genio</h4>
+                    <p class="list-group-item-text">Cooper, un perro Shih Tzu ha sorprendido a los usuarios de las redes sociales después de que su dueña publicara un video en el que se puede ver al animal completando un juego para niños en el que...</p>
+                </a>
+            </aside>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>Ivan Tavera - TheParadise.ink</p>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="list-inline text-right">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Tattoos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% block javascripts %}{% endblock %}
+    <script src="{{ asset('bundles/veterinaria/js/jquery.js') }}"></script>
+    <script src="{{ asset('bundles/veterinaria/js/bootstrap.min.js') }}"></script>
+</body>
 </html>
+

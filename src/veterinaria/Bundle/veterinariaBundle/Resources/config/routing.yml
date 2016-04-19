@@ -39,5 +39,5 @@ veterinaria_cliente:
     prefix:   /cliente
 
 veterinaria_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: veterinariaBundle:Default:index }
