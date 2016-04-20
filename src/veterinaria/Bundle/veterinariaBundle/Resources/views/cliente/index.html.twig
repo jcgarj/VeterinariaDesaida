@@ -4,14 +4,12 @@
     <section class="posts col-md-9">
         <h1>cliente list</h1>
 
-
-    <table class="records_list">
+<div class="table-responsive">
+    <table class="table table-bordered records_list">
         <thead>
-            <tr>
+            <tr class="active">
                 <th>Id</th>
-                <th>Nombrecl</th>
-                <th>Appatcl</th>
-                <th>Apmatcl</th>
+                <th>Nombre Completo</th>
                 <th>Calle</th>
                 <th>Noext</th>
                 <th>Noint</th>
@@ -26,9 +24,7 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('cliente_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.nombreCL }}</td>
-                <td>{{ entity.appatCL }}</td>
-                <td>{{ entity.apmatCL }}</td>
+                <td>{{ entity.nombreCL~' '~entity.appatCL~' '~entity.apmatCL}}</td>
                 <td>{{ entity.calle }}</td>
                 <td>{{ entity.noExt }}</td>
                 <td>{{ entity.noInt }}</td>
@@ -50,6 +46,7 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 
         <ul>
         <li>
