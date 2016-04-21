@@ -5,40 +5,77 @@
         <h1>mascota edit</h1>
 
     {{ form_start(edit_form) }}
+        <form class="form-horizontal">
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Nombre de la Mascota:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.nombreM, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.nombreM) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Peso:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.peso, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.peso) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Edad:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.edad, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.edad) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Color:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.color, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.color) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Especie:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.especie, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.especie) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Raza:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.raza, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.raza) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Cliente:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.cliente, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.cliente) }}
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Nombre de la Mascota:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.mvz, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.mvz) }}
+                    </div>
+                </div>
 
-    {{ form_widget(edit_form.nombreM, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.nombreM) }}
-
-    {{ form_widget(edit_form.peso, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.peso) }}
-
-    {{ form_widget(edit_form.edad, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.edad) }}
-
-    {{ form_widget(edit_form.color, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.color) }}
-
-    {{ form_widget(edit_form.especie, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.especie) }}
-
-    {{ form_widget(edit_form.raza, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.raza) }}
-
-    {{ form_widget(edit_form.cliente, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.cliente) }}
-
-    {{ form_widget(edit_form.mvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.mvz) }}
-
-    {{ form_widget(edit_form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('mascota') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+                <div class="container">
+                            {{ form_widget(edit_form._token) }}
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Editar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            
+                            <button class="btn btn-success">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
     </section>
 {% endblock %}

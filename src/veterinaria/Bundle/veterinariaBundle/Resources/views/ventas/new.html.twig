@@ -5,36 +5,70 @@
         <h1>ventas creation</h1>
 
     {{ form_start(form) }}
+        <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Fecha de salida:</label>
+                        <div class="col-md-9">
 
-    {{ form_widget(form.fechaSalida, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.fechaSalida) }}
+                            {{ form_widget(form.fechaSalida, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.fechaSalida) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Cantidad:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.cantidad, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.cantidad) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Total:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.total, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.total) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Clente:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.cliente, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.cliente) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Veterinario:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.mvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.mvz) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Medicamentos:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.medicamentos, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.medicamentos) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Producto:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.productos, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.productos) }}
+                        </div>
+                    </div>
 
-    {{ form_widget(form.cantidad, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.cantidad) }}
+                <div class="container">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            {{ form_widget(form._token) }}
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Registrar</button>
+                        </div>
+                    </div>
+                </div>                
 
-    {{ form_widget(form.total, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.total) }}
-
-    {{ form_widget(form.cliente, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.cliente) }}
-
-    {{ form_widget(form.mvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.mvz) }}
-
-    {{ form_widget(form.medicamentos, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.medicamentos) }}
-
-    {{ form_widget(form.productos, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.productos) }}
-
-    {{ form_widget(form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('ventas') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            </form>
     </section>
 {% endblock %}

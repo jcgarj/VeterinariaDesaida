@@ -5,37 +5,71 @@
         <h1>ventas edit</h1>
 
     {{ form_start(edit_form) }}
-
-    {{ form_widget(edit_form.fechaSalida, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.fechaSalida) }}
-
-    {{ form_widget(edit_form.cantidad, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.cantidad) }}
-
-    {{ form_widget(edit_form.total, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.total) }}
-
-    {{ form_widget(edit_form.cliente, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.cliente) }}
-
-    {{ form_widget(edit_form.mvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.mvz) }}
-
-    {{ form_widget(edit_form.medicamentos, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.medicamentos) }}
-
-    {{ form_widget(edit_form.productos, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.productos) }}
-
-    {{ form_widget(edit_form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('ventas') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+        <form class="form-horizontal">
+            <div class="form-group row">
+                <label class="control-label col-md-3">Fecha de salida:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.fechaSalida, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.fechaSalida) }}
+            <div class="form-group row">
+                <label class="control-label col-md-3">Cantidad:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.cantidad, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.cantidad) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Total:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.total, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.total) }}
+                    </div>
+                </div>
+             <div class="form-group row">
+                <label class="control-label col-md-3">Cliente:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.cliente, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.cliente) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Veterinario:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.mvz, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.mvz) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Medicamentos:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.medicamentos, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.medicamentos) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Cliente:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.productos, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.productos) }}
+                    </div>
+                </div>
+                    
+                   <div class="container">
+                    <div class="form-group row">
+                            {{ form_widget(edit_form._token) }}
+                        <div class="col-md-2 col-md-offset-2">
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Editar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            
+                            <button class="btn btn-success">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    
     </section>
 {% endblock %}

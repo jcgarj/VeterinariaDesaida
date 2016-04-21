@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+                        {% extends '::base.html.twig' %}
 
 {% block body -%}
     <section class="posts col-md-9">
@@ -6,35 +6,79 @@
 
     {{ form_start(edit_form) }}
 
-    {{ form_widget(edit_form.nombreMvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.nombreMvz) }}
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.nombreMvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.nombreMvz) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.appatMvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.appatMvz) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Apellido Materno:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.apmatMvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.apmatMvz) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Calle:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.calle, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.calle) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">No. Exterior:</label>
+                        <div class="col-md-9">
 
-    {{ form_widget(edit_form.appatMvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.appatMvz) }}
+                            {{ form_widget(edit_form.noExt, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.noExt) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">No. Interior:</label>
+                        <div class="col-md-9">
 
-    {{ form_widget(edit_form.apmatMvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.apmatMvz) }}
-
-    {{ form_widget(edit_form.calle, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.calle) }}
-
-    {{ form_widget(edit_form.noExt, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.noExt) }}
-
-    {{ form_widget(edit_form.noInt, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.noInt) }}
-
-    {{ form_widget(edit_form.colonia, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.colonia) }}
-
-    {{ form_widget(edit_form.delegacion, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.delegacion) }}
-
-    {{ form_widget(edit_form.telefono, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.telefono) }}
-
-    {{ form_widget(edit_form.correo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.correo) }}
+                            {{ form_widget(edit_form.noInt, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.noInt) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Colonia:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.colonia, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.colonia) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Delegacion:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.delegacion, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.delegacion) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Telefono:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.telefono, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.telefono) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Correo:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.correo, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.correo) }}
+                        </div>
+                    </div>
 
     {{ form_widget(edit_form._token) }}
 

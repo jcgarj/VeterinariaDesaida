@@ -1,16 +1,35 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
+<section class="posts col-md-9">
     <h1>inventario edit</h1>
 
-    {{ form(edit_form) }}
+    {{ form_start(edit_form) }}
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Cantidad Existente:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.cantidadExist, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.cantidadExist) }}
+                        </div>
+                </div>
+                <div class="container">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            {{ form_widget(edit_form._token) }}
+                            <button class="btn btn-success">Editar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            
+                            <button class="btn btn-success">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('inventario') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+        
+</section>
 {% endblock %}

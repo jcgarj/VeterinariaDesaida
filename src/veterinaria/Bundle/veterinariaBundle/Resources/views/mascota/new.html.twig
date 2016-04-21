@@ -6,38 +6,77 @@
 
     {{ form_start(form) }}
 
-    {{ form_widget(form.nombreM, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.nombreM) }}
+        <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre de la Mascota:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.nombreM, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.nombreM) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Peso:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.peso, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.peso) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Edad:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.edad, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.edad) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Color:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.color, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.color) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Especie:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.especie, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.especie) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Raza:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.raza, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.raza) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Cliente:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.cliente, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.cliente) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Veterinario:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.mvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.mvz) }}
+                        </div>
+                    </div>
 
-    {{ form_widget(form.peso, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.peso) }}
 
-    {{ form_widget(form.edad, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.edad) }}
+                <div class="container">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            {{ form_widget(form._token) }}
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Registrar</button>
+                        </div>
+                    </div>
+                </div>                
 
-    {{ form_widget(form.color, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.color) }}
-
-    {{ form_widget(form.especie, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.especie) }}
-
-    {{ form_widget(form.raza, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.raza) }}
-
-    {{ form_widget(form.cliente, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.cliente) }}
-
-    {{ form_widget(form.mvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.mvz) }}
-
-    {{ form_widget(form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('mascota') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-    </section>
+            </form>
+     </section>
 {% endblock %}

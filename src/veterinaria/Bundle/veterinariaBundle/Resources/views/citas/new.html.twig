@@ -6,32 +6,62 @@
 
     {{ form_start(form) }}
 
-    {{ form_widget(form.date, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.date) }}
+    <form class="form-horizontal">
+        <div class="form-group row">
+            <label class="control-label col-md-3">Fecha:</label>
+                <div class="col-md-9">
+                    {{ form_widget(form.date, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.date) }}
+                </div>
+            </div>
 
-    {{ form_widget(form.motivo, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
-    {{ form_errors(form.motivo) }}
+        <div class="form-group row">
+            <label class="control-label col-md-3">Motivo</label>
+                <div class="col-md-9">
+                    {{ form_widget(form.motivo, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
+                    {{ form_errors(form.motivo) }}
+                </div>
+            </div>
+        <div class="form-group row">
+            <label class="control-label col-md-3">Costo</label>
+                <div class="col-md-9">
+                    {{ form_widget(form.costo, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
+                    {{ form_errors(form.costo) }}
+                </div>
+            </div>
+        <div class="form-group row">
+            <label class="control-label col-md-3">Cliente</label>
+                <div class="col-md-9">
+                    {{ form_widget(form.cliente, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
+                    {{ form_errors(form.cliente) }}}
+                </div>
+            </div>
+        <div class="form-group row">
+            <label class="control-label col-md-3">Mascota</label>
+                <div class="col-md-9">
+                    {{ form_widget(form.mascota, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
+                    {{ form_errors(form.mascota) }}
+                </div>
+            </div>
+        <div class="form-group row">
+            <label class="control-label col-md-3">Veerinario</label>
+                <div class="col-md-9">
+                    {{ form_widget(form.mvz, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
+                    {{ form_errors(form.mvz) }}
+                </div>
+            </div>
 
-    {{ form_widget(form.costo, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
-    {{ form_errors(form.costo) }}
-
-    {{ form_widget(form.cliente, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
-    {{ form_errors(form.cliente) }}
-
-    {{ form_widget(form.mascota, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
-    {{ form_errors(form.mascota) }}
-
-    {{ form_widget(form.mvz, {'attr': {'class': 'form-control', 'placeholder': 'Nombre'}}) }}
-    {{ form_errors(form.mvz) }}
-
-    {{ form_widget(form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('citas') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            <div class="container">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            {{ form_widget(form._token) }}
+                            <button class="btn btn-success">Registrar</button>
+                        </div>
+                    </div>
+                </div>                
+        </form>
     </section>
 {% endblock %}

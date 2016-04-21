@@ -91,10 +91,10 @@
                 <div class="container">
                     <div class="form-group row">
                         <div class="col-md-2 col-md-offset-2">
+                            {{ form_widget(form._token) }}
                             <button class="btn btn-primary">Regresar</button>
                         </div>
                         <div class="col-md-2 ">
-                            {{ form_widget(form._token) }}
                             <button class="btn btn-success">Registrar</button>
                         </div>
                     </div>
@@ -102,12 +102,5 @@
 
             </form>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('cliente') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
     </section>
 {% endblock %}

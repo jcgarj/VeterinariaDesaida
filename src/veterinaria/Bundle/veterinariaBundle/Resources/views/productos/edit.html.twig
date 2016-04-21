@@ -5,21 +5,45 @@
         <h1>productos edit</h1>
 
     {{ form_start(edit_form) }}
+        <form class="form-horizontal">
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Nombre del Producto:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.nombreProd, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.nombreProd) }}
+                    </div>
+                </div>
 
-    {{ form_widget(edit_form.nombreProd, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.nombreProd) }}
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Costo:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.costo) }}
+                </div>
+            </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Precio:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.precio, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.precio) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Fecha de Entrega:</label>
+                    <div class="col-md-9">
 
-    {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.costo) }}
+                        {{ form_widget(edit_form.fechaEntrega, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.fechaEntrega) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                 <label class="control-label col-md-3">Proveedores:</label>
+                    <div class="col-md-9">
 
-    {{ form_widget(edit_form.precio, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.precio) }}
-
-    {{ form_widget(edit_form.fechaEntrega, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.fechaEntrega) }}
-
-    {{ form_widget(edit_form.proveedores, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.proveedores) }}
+                        {{ form_widget(edit_form.proveedores, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.proveedores) }}
+                    </div>
+                </div>
 
     {{ form_widget(edit_form._token) }}
 

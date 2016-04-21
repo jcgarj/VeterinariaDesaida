@@ -5,45 +5,89 @@
         <h1>mvz creation</h1>
 
     {{ form_start(form) }}
+             <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre del Medico:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.nombreMvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.nombreMvz) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Apellido Paterno:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.appatMvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.appatMvz) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Apellido Materno:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.apmatMvz, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.apmatMvz) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Calle:</label>
+                        <div class="col-md-9">
+                                {{ form_widget(form.calle, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(form.calle) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">No. Exterior:</label>
+                        <div class="col-md-9">
+                                {{ form_widget(form.noExt, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(form.noExt) }}
+                            </div>
+                        </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">No. Interior:</label>
+                        <div class="col-md-9">
+                                {{ form_widget(form.noInt, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(form.noInt) }}
+                            </div>
+                        </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Colonia:</label>
+                        <div class="col-md-9">
+                                {{ form_widget(form.colonia, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(form.colonia) }}
+                            </div>
+                        </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Delegacion:</label>
+                        <div class="col-md-9">
+                                {{ form_widget(form.delegacion, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(form.delegacion) }}
+                            </div>
+                        </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Telefono:</label>
+                        <div class="col-md-9">
+                                {{ form_widget(form.telefono, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(form.telefono) }}
+                            </div>
+                        </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Correo:</label>
+                        <div class="col-md-9">
+                                {{ form_widget(form.correo, {'attr': {'class': 'form-control'}}) }}
+                                {{ form_errors(form.correo) }}
+                            </div>
+                        </div>
+                <div class="container">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            {{ form_widget(form._token) }}
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Registrar</button>
+                        </div>
+                    </div>
+                </div>                
 
-    {{ form_widget(form.nombreMvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.nombreMvz) }}
-
-    {{ form_widget(form.appatMvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.appatMvz) }}
-
-    {{ form_widget(form.apmatMvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.apmatMvz) }}
-
-    {{ form_widget(form.calle, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.calle) }}
-
-    {{ form_widget(form.noExt, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.noExt) }}
-
-    {{ form_widget(form.noInt, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.noInt) }}
-
-    {{ form_widget(form.colonia, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.colonia) }}
-
-    {{ form_widget(form.delegacion, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.delegacion) }}
-
-    {{ form_widget(form.telefono, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.telefono) }}
-
-    {{ form_widget(form.correo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.correo) }}
-
-    {{ form_widget(form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('mvz') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            </form>
     </section>
 {% endblock %}

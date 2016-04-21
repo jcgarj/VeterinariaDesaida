@@ -6,33 +6,63 @@
 
     {{ form_start(edit_form) }}
 
-    {{ form_widget(edit_form.date, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.date) }}
+     <form class="form-horizontal">
+            <div class="form-group row">
+                <label class="control-label col-md-3">Nombre:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.date, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.date) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Motivo:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.motivo, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.motivo) }}
+                    </div>
+                </div>
+             <div class="form-group row">
+                <label class="control-label col-md-3">Nombre:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.costo) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Cliente:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.cliente, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.cliente) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Mascota:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.mascota, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.mascota) }}
+                    </div>
+                </div>
+            <div class="form-group row">
+                <label class="control-label col-md-3">Veterinario:</label>
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.mvz, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(edit_form.mvz) }}
+                    </div>
+                </div>
 
-    {{ form_widget(edit_form.motivo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.motivo) }}
-
-    {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.costo) }}
-
-    {{ form_widget(edit_form.cliente, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.cliente) }}
-
-    {{ form_widget(edit_form.mascota, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.mascota) }}
-
-    {{ form_widget(edit_form.mvz, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.mvz) }}
-
-    {{ form_widget(edit_form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('citas') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
+            <div class="container">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            {{ form_widget(form._token) }}
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Editar</button>
+                            <button class="btn btn-success">Eliminar</button>
+                        </div>
+                    </div>
+                </div>                
+        </form>
 </ul>
     </section>
 {% endblock %}

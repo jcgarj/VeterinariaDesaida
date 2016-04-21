@@ -97,18 +97,15 @@
                             {{ form_widget(edit_form._token) }}
                             <button class="btn btn-success">Editar</button>
                         </div>
+                        <div class="col-md-2 ">
+                            
+                            <button class="btn btn-success">Eliminar</button>
+                        </div>
                     </div>
                 </div>
             </form>
     
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('cliente') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+   
     </section>
 {% endblock %}

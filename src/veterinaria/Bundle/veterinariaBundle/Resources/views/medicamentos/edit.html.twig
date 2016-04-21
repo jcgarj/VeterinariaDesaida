@@ -5,34 +5,67 @@
         <h1>medicamentos edit</h1>
 
     {{ form_start(edit_form) }}
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.nombreMed, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.nombreMed) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Fecha:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.fechaCad, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.fechaCad) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Tipo de Medico:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.tipoMed, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.tipoMed) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Costo:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.costo) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Precio:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.precio, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.precio) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Proveedores:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.proveedores, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.proveedores) }}
+                        </div>
+                    </div>
 
-    {{ form_widget(edit_form.nombreMed, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.nombreMed) }}
+                <div class="container">
+                    <div class="form-group row">
+                            {{ form_widget(edit_form._token) }}
+                        <div class="col-md-2 col-md-offset-2">
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Editar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            
+                            <button class="btn btn-success">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    
 
-    {{ form_widget(edit_form.fechaCad, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.fechaCad) }}
-
-    {{ form_widget(edit_form.tipoMed, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.tipoMed) }}
-
-    {{ form_widget(edit_form.costo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.costo) }}
-
-    {{ form_widget(edit_form.precio, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.precio) }}
-
-    {{ form_widget(edit_form.proveedores, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(edit_form.proveedores) }}
-
-    {{ form_widget(edit_form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('medicamentos') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
     </section>
 {% endblock %}

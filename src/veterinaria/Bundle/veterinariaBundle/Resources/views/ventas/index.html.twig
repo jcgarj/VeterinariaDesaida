@@ -4,7 +4,8 @@
     <section class="posts col-md-9">
         <h1>ventas list</h1>
 
-    <table class="records_list">
+ <div class="table-responsive">
+    <table class="table table-bordered records_list">
         <thead>
             <tr>
                 <th>Id</th>
@@ -35,7 +36,7 @@
         {% endfor %}
         </tbody>
     </table>
-
+</div>
         <ul>
         <li>
             <a href="{{ path('ventas_new') }}">

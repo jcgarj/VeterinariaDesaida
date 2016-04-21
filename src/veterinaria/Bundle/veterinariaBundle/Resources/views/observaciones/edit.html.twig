@@ -1,16 +1,35 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
+<section class="posts col-md-9">
     <h1>observaciones edit</h1>
 
     {{ form(edit_form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('observaciones') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+		
+		<form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Descripcion:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(edit_form.descripcion, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(edit_form.descripcion) }}
+                        </div>
+                    </div>
+                
+        		<div class="container">
+                    <div class="form-group row">
+                            {{ form_widget(edit_form._token) }}
+                        <div class="col-md-2 col-md-offset-2">
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Editar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            
+                            <button class="btn btn-success">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
 {% endblock %}

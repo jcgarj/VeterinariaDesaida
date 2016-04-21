@@ -5,33 +5,62 @@
         <h1>medicamentos creation</h1>
 
     {{ form_start(form) }}
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre del Medico:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.nombreMed, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.nombreMed) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Fecha:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.fechaCad, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.fechaCad) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Tipo Medico:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.tipoMed, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.tipoMed) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre de la Mascota:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.costo, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.costo) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre de la Mascota:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.precio, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.precio) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre de la Mascota:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.proveedores, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.proveedores) }}
+                        </div>
+                    </div>
 
-    {{ form_widget(form.nombreMed, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.nombreMed) }}
+                 <div class="container">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-md-offset-2">
+                            {{ form_widget(form._token) }}
+                            <button class="btn btn-primary">Regresar</button>
+                        </div>
+                        <div class="col-md-2 ">
+                            <button class="btn btn-success">Registrar</button>
+                        </div>
+                    </div>
+                </div>                
 
-    {{ form_widget(form.fechaCad, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.fechaCad) }}
-
-    {{ form_widget(form.tipoMed, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.tipoMed) }}
-
-    {{ form_widget(form.costo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.costo) }}
-
-    {{ form_widget(form.precio, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.precio) }}
-
-    {{ form_widget(form.proveedores, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.proveedores) }}
-
-    {{ form_widget(form._token) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('medicamentos') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            </form>
     </section>
 {% endblock %}

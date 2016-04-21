@@ -217,7 +217,7 @@ class citasController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('citas_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            
             ->getForm()
         ;
     }

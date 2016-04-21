@@ -5,22 +5,43 @@
         <h1>productos creation</h1>
 
     {{ form_start(form) }}
+             <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Nombre del Producto:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.nombreProd, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.nombreProd) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Costo:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.costo, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.costo) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Precio:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.precio, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.precio) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Fecha de entrega:</label>
+                        <div class="col-md-9">
 
-    {{ form_widget(form.nombreProd, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.nombreProd) }}
-
-    {{ form_widget(form.costo, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.costo) }}
-
-    {{ form_widget(form.precio, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.precio) }}
-
-    {{ form_widget(form.fechaEntrega, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.fechaEntrega) }}
-
-    {{ form_widget(form.proveedores, {'attr': {'class': 'form-control'}}) }}
-    {{ form_errors(form.proveedores) }}
-
+                            {{ form_widget(form.fechaEntrega, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.fechaEntrega) }}
+                        </div>
+                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3">Proveedores:</label>
+                        <div class="col-md-9">
+                            {{ form_widget(form.proveedores, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_errors(form.proveedores) }}
+                        </div>
+                    </div>
     {{ form_widget(form._token) }}
 
         <ul class="record_actions">
